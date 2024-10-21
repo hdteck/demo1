@@ -24,7 +24,7 @@ pipeline {
         stage("Build") {
             parallel {
                 stage("Debug") {
-                    when { expression { !params.RELEASE } }
+ //                   when { expression { !params.RELEASE } }
                     steps {
                         script {
                             // If operating system is macOS
@@ -50,7 +50,7 @@ pipeline {
                     }
                 }
                 stage("Release") {
-                    when { expression { params.RELEASE } }
+ //                   when { expression { params.RELEASE } }
                     steps {
                         script {
                             // If operating system is macOS
